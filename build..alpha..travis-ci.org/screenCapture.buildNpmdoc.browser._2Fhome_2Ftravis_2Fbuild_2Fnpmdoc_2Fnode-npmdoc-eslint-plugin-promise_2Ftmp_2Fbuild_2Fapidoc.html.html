@@ -1,0 +1,769 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/xjamundx/eslint-plugin-promise#readme">eslint-plugin-promise (v3.5.0)</a>
+</h1>
+<h4>Enforce best practices for JavaScript promises</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-promise">module eslint-plugin-promise</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.</span>configs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.</span>rules</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.</span>rules.always-return</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.</span>rules.catch-or-return</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.</span>rules.no-native</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.</span>rules.no-return-wrap</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.</span>rules.param-names</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.</span>rulesConfig</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-promise.rules">module eslint-plugin-promise.rules</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-promise.rules.avoid-new">
+            function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>avoid-new
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-promise.rules.no-callback-in-promise">
+            function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>no-callback-in-promise
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-promise.rules.no-nesting">
+            function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>no-nesting
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-promise.rules.no-promise-in-callback">
+            function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>no-promise-in-callback
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-promise.rules.prefer-await-to-callbacks">
+            function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>prefer-await-to-callbacks
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-promise.rules.prefer-await-to-then">
+            function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>prefer-await-to-then
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>always-return</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>catch-or-return</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>no-native</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>no-return-wrap</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>param-names</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-promise.rules.always-return">module eslint-plugin-promise.rules.always-return</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-promise.rules.always-return.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.always-return.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-promise.rules.catch-or-return">module eslint-plugin-promise.rules.catch-or-return</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-promise.rules.catch-or-return.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.catch-or-return.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-promise.rules.no-native">module eslint-plugin-promise.rules.no-native</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-promise.rules.no-native.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.no-native.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-promise.rules.no-return-wrap">module eslint-plugin-promise.rules.no-return-wrap</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-promise.rules.no-return-wrap.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.no-return-wrap.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-promise.rules.param-names">module eslint-plugin-promise.rules.param-names</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-promise.rules.param-names.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.param-names.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-promise" id="apidoc.module.eslint-plugin-promise">module eslint-plugin-promise</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-promise.rules" id="apidoc.module.eslint-plugin-promise.rules">module eslint-plugin-promise.rules</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-promise.rules.avoid-new" id="apidoc.element.eslint-plugin-promise.rules.avoid-new">
+        function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>avoid-new
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">avoid-new = function (context) {
+  return {
+    NewExpression: function (node) {
+      if (node.callee.name === 'Promise') {
+        context.report(node, 'Avoid creating new promises.')
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-promise.rules.no-callback-in-promise" id="apidoc.element.eslint-plugin-promise.rules.no-callback-in-promise">
+        function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>no-callback-in-promise
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-callback-in-promise = function (context) {
+  return {
+    CallExpression: function (node) {
+      if (!isCallback(node)) {
+        // in general we send you packing if you're not a callback
+        // but we also need to watch out for whatever.then(cb)
+        if (hasPromiseCallback(node)) {
+          var name = node.arguments &amp;&amp; node.arguments[0] &amp;&amp; node.arguments[0].name
+          if (name === 'callback' || name === 'cb' || name === 'next' || name === 'done') {
+            context.report(node.arguments[0], 'Avoid calling back inside of a promise.')
+          }
+        }
+        return
+      }
+      if (context.getAncestors().some(isInsidePromise)) {
+        context.report(node, 'Avoid calling back inside of a promise.')
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-promise.rules.no-nesting" id="apidoc.element.eslint-plugin-promise.rules.no-nesting">
+        function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>no-nesting
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-nesting = function (context) {
+  return {
+    CallExpression: function (node) {
+      if (!hasPromiseCallback(node)) return
+      if (context.getAncestors().some(isInsidePromise)) {
+        context.report(node, 'Avoid nesting promises.')
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-promise.rules.no-promise-in-callback" id="apidoc.element.eslint-plugin-promise.rules.no-promise-in-callback">
+        function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>no-promise-in-callback
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-promise-in-callback = function (context) {
+  return {
+    CallExpression: function (node) {
+      if (!isPromise(node)) return
+
+      // if i'm returning the promise, it's probably not really a callback
+      // function, and I should be okay....
+      if (node.parent.type === 'ReturnStatement') return
+
+      // what about if the parent is an ArrowFunctionExpression
+      // would that imply an implicit return?
+
+      if (context.getAncestors().some(isInsideCallback)) {
+        context.report(node.callee, 'Avoid using promises inside of callbacks.')
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-promise.rules.prefer-await-to-callbacks" id="apidoc.element.eslint-plugin-promise.rules.prefer-await-to-callbacks">
+        function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>prefer-await-to-callbacks
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prefer-await-to-callbacks = function (context) {
+  function checkLastParamsForCallback (node) {
+    var len = node.params.length - 1
+    var lastParam = node.params[len]
+    if (lastParam &amp;&amp; (lastParam.name === 'callback' || lastParam.name === 'cb')) {
+      context.report(lastParam, errorMessage)
+    }
+  }
+  function isInsideYieldOrAwait () {
+    return context.getAncestors().some(function (parent) {
+      return parent.type === 'AwaitExpression' || parent.type === 'YieldExpression'
+    })
+  }
+  return {
+    CallExpression: function (node) {
+      // callbacks aren't allowed
+      if (node.callee.name === 'cb' || node.callee.name === 'callback') {
+        context.report(node, errorMessage)
+        return
+      }
+
+      // thennables aren't allowed either
+      var args = node.arguments
+      var num = args.length - 1
+      var arg = num &gt; -1 &amp;&amp; node.arguments &amp;&amp; node.arguments[num]
+      if (arg &amp;&amp; arg.type === 'FunctionExpression' || arg.type === 'ArrowFunctionExpression') {
+        if (arg.params &amp;&amp; arg.params[0] &amp;&amp; arg.params[0].name === 'err') {
+          if (!isInsideYieldOrAwait()) {
+            context.report(arg, errorMessage)
+          }
+        }
+      }
+    },
+    FunctionDeclaration: checkLastParamsForCallback,
+    FunctionExpression: checkLastParamsForCallback,
+    ArrowFunctionExpression: checkLastParamsForCallback
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-promise.rules.prefer-await-to-then" id="apidoc.element.eslint-plugin-promise.rules.prefer-await-to-then">
+        function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.</span>prefer-await-to-then
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prefer-await-to-then = function (context) {
+  return {
+    MemberExpression: function (node) {
+      // you can then() if you are inside of a yield or await
+      if (context.getAncestors().some(function (parent) {
+        return parent.type === 'AwaitExpression' || parent.type === 'YieldExpression'
+      })) {
+        return
+      }
+
+      // if you're a then expression then you're probably a promise
+      if (node.property &amp;&amp; node.property.name === 'then') {
+        context.report(node.property, 'Prefer await to then().')
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-promise.rules.always-return" id="apidoc.module.eslint-plugin-promise.rules.always-return">module eslint-plugin-promise.rules.always-return</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-promise.rules.always-return.create" id="apidoc.element.eslint-plugin-promise.rules.always-return.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.always-return.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  // funcInfoStack is a stack representing the stack of currently executing
+  //   functions
+  // funcInfoStack[i].branchIDStack is a stack representing the currently
+  //   executing branches ("codePathSegment"s) within the given function
+  // funcInfoStack[i].branchInfoMap is an object representing information
+  //   about all branches within the given function
+  // funcInfoStack[i].branchInfoMap[j].good is a boolean representing whether
+  //   the given branch explictly `return`s or `throw`s. It starts as `false`
+  //   for every branch and is updated to `true` if a `return` or `throw`
+  //   statement is found
+  // funcInfoStack[i].branchInfoMap[j].loc is a eslint SourceLocation object
+  //   for the given branch
+  // example:
+  //   funcInfoStack = [ { branchIDStack: [ 's1_1' ],
+  //       branchInfoMap:
+  //        { s1_1:
+  //           { good: false,
+  //             loc: &lt;loc&gt; } } },
+  //     { branchIDStack: ['s2_1', 's2_4'],
+  //       branchInfoMap:
+  //        { s2_1:
+  //           { good: false,
+  //             loc: &lt;loc&gt; },
+  //          s2_2:
+  //           { good: true,
+  //             loc: &lt;loc&gt; },
+  //          s2_4:
+  //           { good: false,
+  //             loc: &lt;loc&gt; } } } ]
+  var funcInfoStack = []
+
+  function markCurrentBranchAsGood () {
+    var funcInfo = peek(funcInfoStack)
+    var currentBranchID = peek(funcInfo.branchIDStack)
+    if (funcInfo.branchInfoMap[currentBranchID]) {
+      funcInfo.branchInfoMap[currentBranchID].good = true
+    }
+    // else unreachable code
+  }
+
+  return {
+    ReturnStatement: markCurrentBranchAsGood,
+    ThrowStatement: markCurrentBranchAsGood,
+
+    onCodePathSegmentStart: function (segment, node) {
+      var funcInfo = peek(funcInfoStack)
+      funcInfo.branchIDStack.push(segment.id)
+      funcInfo.branchInfoMap[segment.id] = {good: false, node: node}
+    },
+
+    onCodePathSegmentEnd: function (segment, node) {
+      var funcInfo = peek(funcInfoStack)
+      funcInfo.branchIDStack.pop()
+    },
+
+    onCodePathStart: function (path, node) {
+      funcInfoStack.push({
+        branchIDStack: [],
+        branchInfoMap: {}
+      })
+    },
+
+    onCodePathEnd: function (path, node) {
+      var funcInfo = funcInfoStack.pop()
+
+      if (!isInlineThenFunctionExpression(node)) {
+        return
+      }
+
+      path.finalSegments.forEach((segment) =&gt; {
+        var id = segment.id
+        var branch = funcInfo.branchInfoMap[id]
+        if (!branch.good) {
+          if (hasParentReturnStatement(branch.node)) {
+            return
+          }
+
+          // check shortcircuit syntax like `x &amp;&amp; x()` and `y || x()``
+          var prevSegments = segment.prevSegments
+          for (var ii = prevSegments.length - 1; ii &gt;= 0; --ii) {
+            var prevSegment = prevSegments[ii]
+            if (funcInfo.branchInfoMap[prevSegment.id].good) return
+          }
+
+          context.report({
+            message: 'Each then() should return a value or throw',
+            node: branch.node
+          })
+        }
+      })
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-promise.rules.catch-or-return" id="apidoc.module.eslint-plugin-promise.rules.catch-or-return">module eslint-plugin-promise.rules.catch-or-return</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-promise.rules.catch-or-return.create" id="apidoc.element.eslint-plugin-promise.rules.catch-or-return.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.catch-or-return.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  var options = context.options[0] || {}
+  var allowThen = options.allowThen
+  var terminationMethod = options.terminationMethod || 'catch'
+
+  if (typeof terminationMethod === 'string') {
+    terminationMethod = [terminationMethod]
+  }
+
+  return {
+    ExpressionStatement: function (node) {
+      if (!isPromise(node.expression)) {
+        return
+      }
+
+      // somePromise.then(a, b)
+      if (allowThen &amp;&amp;
+        node.expression.type === 'CallExpression' &amp;&amp;
+        node.expression.callee.type === 'MemberExpression' &amp;&amp;
+        node.expression.callee.property.name === 'then' &amp;&amp;
+        node.expression.arguments.length === 2
+      ) {
+        return
+      }
+
+      // somePromise.catch()
+      if (node.expression.type === 'CallExpression' &amp;&amp;
+        node.expression.callee.type === 'MemberExpression' &amp;&amp;
+        terminationMethod.indexOf(node.expression.callee.property.name) !== -1
+      ) {
+        return
+      }
+      context.report(node, 'Expected ' + terminationMethod + '() or return')
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-promise.rules.no-native" id="apidoc.module.eslint-plugin-promise.rules.no-native">module eslint-plugin-promise.rules.no-native</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-promise.rules.no-native.create" id="apidoc.element.eslint-plugin-promise.rules.no-native.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.no-native.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  var MESSAGE = '"function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.no-native.</span>create" is not defined.'
+
+<span class="apidocCodeCommentSpan">  /**
+   * Checks for and reports reassigned constants
+   *
+   * @param {Scope} scope - an escope Scope object
+   * @returns {void}
+   * @private
+   */
+</span>  return {
+    'Program:exit': function () {
+      var scope = context.getScope()
+
+      scope.implicit.left.forEach(function (ref) {
+        if (ref.identifier.name !== 'Promise') {
+          return
+        }
+
+        if (!isDeclared(scope, ref)) {
+          context.report(ref.identifier, MESSAGE, { name: ref.identifier.name })
+        }
+      })
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-promise.rules.no-return-wrap" id="apidoc.module.eslint-plugin-promise.rules.no-return-wrap">module eslint-plugin-promise.rules.no-return-wrap</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-promise.rules.no-return-wrap.create" id="apidoc.element.eslint-plugin-promise.rules.no-return-wrap.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.no-return-wrap.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  return {
+    ReturnStatement: function (node) {
+      if (isInPromise(context)) {
+        if (node.argument) {
+          if (node.argument.type === 'CallExpression') {
+            if (node.argument.callee.type === 'MemberExpression') {
+              if (node.argument.callee.object.name === 'Promise') {
+                if (node.argument.callee.property.name === 'resolve') {
+                  context.report(node, resolveMessage)
+                } else if (node.argument.callee.property.name === 'reject') {
+                  context.report(node, rejectMessage)
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-promise.rules.param-names" id="apidoc.module.eslint-plugin-promise.rules.param-names">module eslint-plugin-promise.rules.param-names</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-promise.rules.param-names.create" id="apidoc.element.eslint-plugin-promise.rules.param-names.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-promise.rules.param-names.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  return {
+    NewExpression: function (node) {
+      if (node.callee.name === 'Promise' &amp;&amp; node.arguments.length === 1) {
+        var params = node.arguments[0].params
+
+        if (!params || !params.length) { return }
+
+        if (params[0].name !== 'resolve') {
+          return context.report(node, 'Promise constructor parameters must be named resolve, reject')
+        }
+
+        if (params[1] &amp;&amp; params[1].name !== 'reject') {
+          return context.report(node, 'Promise constructor parameters must be named resolve, reject')
+        }
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
